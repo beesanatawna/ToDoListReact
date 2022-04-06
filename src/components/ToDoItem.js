@@ -1,13 +1,17 @@
-import React from 'react'
+import React from "react";
+import "./ToDoApp.css";
+import ToDoApp from "./ToDoApp";
 
-function ToDoItem(props) {
-
+function ToDoItem(props){
   return (
-    <div>
-        <h6>{props.title}</h6>
-        <button>done</button>
+    <div className="items">
+      <h4>{props.title}</h4>
+     
+         <button onClick={props.delete} >Remove Task</button>
+      
+     
     </div>
-  )
+  );
 }
 
-export default ToDoItem
+export default ToDoItem;
